@@ -41,7 +41,7 @@ string makeList(string inputString){
     int length = inputString.length();
     char* inputArray = StringToChararray(inputString);
     string list;
-    for(int i = 0; i<length;i++){
+    for(int i = 0; i<length+1;i++){
         if(inputArray[i] != '1' && inputArray[i] != '2' && inputArray[i] != '3' && inputArray[i] != '4' && inputArray[i] != '5' && inputArray[i] != '6' && inputArray[i] != '7' && inputArray[i] != '8' && inputArray[i] != '9' && inputArray[i] != '0' && inputArray[i] != '<'){
             char* charList = new char[list.length()+10];
             charList = StringToChararray(list);
@@ -67,8 +67,8 @@ int harderThanXY(char input, string inputString){
     int found = 0;
     bool active = false;
     inputArray = StringToChararray(inputString);
-    for(int i = 0; i<inputString.length(); i++){
-        if(inputArray[i] != 1 && inputArray[i] != 2 && inputArray[i] != 3 && inputArray[i] != 4 && inputArray[i] != 5 && inputArray[i] != 6 && inputArray[i] != 7 && inputArray[i] != 8 && inputArray[i] != 9 && inputArray[i] != 0 && inputArray[i] != '<'){
+    for(int i = 0; i<inputString.length()+100; i++){
+        if(inputArray[i] != '1' && inputArray[i] != '2' && inputArray[i] != '3' && inputArray[i] != '4' && inputArray[i] != '5' && inputArray[i] != '6' && inputArray[i] != '7' && inputArray[i] != '8' && inputArray[i] != '9' && inputArray[i] != '0' && inputArray[i] != '<'){
             if(inputArray[i+1] == '<'){
                 if(active == true){
                     if(searchInArrayIfFound(usedChar,inputArray[i]) != true){
@@ -91,8 +91,8 @@ int harderThanXY(char input, string inputString,char* usedChar){
     int found = 0;
     bool active = false;
     inputArray = StringToChararray(inputString);
-    for(int i = 0; i<inputString.length()+1; i++){
-        if(inputArray[i] != 1 && inputArray[i] != 2 && inputArray[i] != 3 && inputArray[i] != 4 && inputArray[i] != 5 && inputArray[i] != 6 && inputArray[i] != 7 && inputArray[i] != 8 && inputArray[i] != 9 && inputArray[i] != 0 && inputArray[i] != '<'){
+    for(int i = 0; i<inputString.length()+100; i++){
+        if(inputArray[i] != '1' && inputArray[i] != '2' && inputArray[i] != '3' && inputArray[i] != '4' && inputArray[i] != '5' && inputArray[i] != '6' && inputArray[i] != '7' && inputArray[i] != '8' && inputArray[i] != '9' && inputArray[i] != '0' && inputArray[i] != '<'){
             if(inputArray[i+1] == '<'){
                 if(active == true){
                     if(searchInArrayIfFound(usedChar,inputArray[i]) != true){
